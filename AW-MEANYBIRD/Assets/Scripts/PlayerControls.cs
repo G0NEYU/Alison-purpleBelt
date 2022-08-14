@@ -15,7 +15,7 @@ public class PlayerControls : MonoBehaviour
         gameController = GetComponent<GameController>();
       Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
-        //objectHeight = transform.GetComponent<SpriteRenderee>
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
     
 
     }
@@ -23,6 +23,12 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       if (Input.GetMouseButtonDown(0))
+        {
+
+
+            rb.velocity = Vector2.up * velocity;
+        }
 
     }
 }
