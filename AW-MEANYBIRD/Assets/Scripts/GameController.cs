@@ -16,14 +16,21 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
         scoreCanvas.SetActive(true);
-        spawner.SetActive(false);
+        gameOverCanvas.SetActive(false);
+        spawner.SetActive(true);
 
-        Time.timeScale = 0;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }  
+    public void GameOver()
+    {
+        gameOverCanvas.SetActive(true);
+        spawner.SetActive(false);
+        Time.timeScale = 0;
     }
 }

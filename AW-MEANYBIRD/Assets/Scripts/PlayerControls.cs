@@ -33,9 +33,10 @@ public class PlayerControls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject.Find("GameController").GetComponent<GameController>().GameOver();
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "HighSpike" || collision.gameObject.tag == "LowSpike" || collision.gameObject.tag == "Ground")
-        {
+        { 
             Time.timeScale = 0;
         }
             
