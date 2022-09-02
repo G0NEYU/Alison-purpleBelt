@@ -9,21 +9,26 @@ public class GameController : MonoBehaviour
     [Header("Platform Object")]
     public GameObject platform;
     float pos = 0;
+
+    [Header("Game Over UI Canvas Object")]
+    public GameObject gameOverCanvas;
+
+
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        for (int i = 0; 1 < 1000; i++)
+        for (int i = 0; i < 1000; i++)
         {
 
             SpawnPlatforms();
 
         }
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
 
 
     }
@@ -34,7 +39,10 @@ public class GameController : MonoBehaviour
         pos += 2.5f;
     }
 
-
+    public void GameOver()
+    {
+        gameOverCanvas.SetActive(true);
+    }
 
 
 
