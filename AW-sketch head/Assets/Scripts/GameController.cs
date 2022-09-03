@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
     void SpawnPlatforms()
     {
         Instantiate(platform, new Vector3(Random.value * 10 - 5f, pos,  0.5f), Quaternion.identity);
-        pos += 2.5f;
+        pos += 6.9f;
     }
 
     public void GameOver()
