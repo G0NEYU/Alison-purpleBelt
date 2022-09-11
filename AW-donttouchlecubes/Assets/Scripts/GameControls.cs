@@ -2,27 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class GameControls: MonoBehaviour
+public class GameControls : MonoBehaviour
 {
-    [Header("Spawn Cube Object")]
-    public GameObject spawnCube;
-        [Header("Default Difficulty")]
-        public float difficulty = 40f;
-    float spawn;
+    private Text timerText;
+    private int timerCount;
+
     // Start is called before the first frame update
-    
+
     // Update is called once per frame
-    void Update()
+    IEnumerator CountTime ()
     {
-        spawn = difficulty * Time.unscaledDeltaTime;
-        difficulty = Time.deltaTime * 4f;
-         while (spawn > 0)
-        {
-            spawn -= 1;
-            Vector3 v3Pos = transform.position + new Vector3(Random.value * 40f - 20f, 0, Random.value * 40f - 20f);
-            Quaternion qRotation = Quaternion.Euler(0, Random.value * 360f, Random.value * 30f);
-            GameObject createObject = Instantiate(spawnCube, v3Pos, qRotation);
-        }
+        yield return new WaitForSeconds(1f);
+        timerCount++;
+        timerText.text = "Score: " + timerCount;
+        StartCoroutine(CountTime());
+    }
+
+     void Start()
+    {
+        Time.timeScale = 1f;
+        StartCoroutine(CountTime());
+        timerText = GameObject.Find("Score").GetComponent<Text>();
+    }
+     void OnCollisionEnter(Collision collision)
+    {
+        SceneManager.LoadScene(0);
     }
 }
