@@ -19,10 +19,10 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(15, -2.75f, 0);
+        transform.position = new Vector3(15, 0f, 0);
     }
      void InstantiateObjects()
     {
         Instantiate(challengeObject, transform.position, transform.rotation);
-    }
+    } 
 }
