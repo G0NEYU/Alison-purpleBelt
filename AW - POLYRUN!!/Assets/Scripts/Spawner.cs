@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("InstantiateObjects", spawnDelay, spawnTime);
+
     }
 
     // Update is called once per frame
