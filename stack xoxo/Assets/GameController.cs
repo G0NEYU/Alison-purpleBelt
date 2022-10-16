@@ -20,7 +20,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Newblock();
+        Newblock(); 
+        text.text =  "score  " + Level;
     }
 
     // Update is called once per frame
@@ -32,8 +33,10 @@ public class GameController : MonoBehaviour
         }
         var time = Mathf.Abs(Time.realtimeSinceStartup % 2f - 1f);
         var pos1 = lastCube.transform.position + Vector3.up * 10f;
-        var pos2 = pos1 + ((Level % 2 == 0) ? Vector3.left : Vector3.forward) * 120; 
-     
+        var pos2 = pos1 + ((Level % 2 == 0) ? Vector3.left : Vector3.forward) * 120;
+        var pos3 = pos1 + ((Level % 3 == 1) ? Vector3.right : Vector3.back) * 240;
+
+
         if (Level % 2 == 0)
         {
             currentCube.transform.position = Vector3.Lerp(pos2, pos1, time);
@@ -43,8 +46,11 @@ public class GameController : MonoBehaviour
             currentCube.transform.position = Vector3.Lerp(pos1, pos2, time);
         } 
         if (Input.GetMouseButtonDown(0))
-        {
+        { 
+
             Newblock();
+
+            text.text = "score  " + Level;
         }
     }
 
@@ -67,7 +73,7 @@ public class GameController : MonoBehaviour
             Done = true;
 
             text.gameObject.SetActive(true);
-
+            
             text.text = "Final Score  " + Level;
 
             StartCoroutine(X());
