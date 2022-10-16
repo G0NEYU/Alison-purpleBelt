@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         var time = Mathf.Abs(Time.realtimeSinceStartup % 2f - 1f);
         var pos1 = lastCube.transform.position + Vector3.up * 10f;
         var pos2 = pos1 + ((Level % 2 == 0) ? Vector3.left : Vector3.forward) * 120;
-        var pos3 = pos1 + ((Level % 3 == 1) ? Vector3.right : Vector3.back) * 240;
+        var pos3 = pos1 + ((Level % 2== 0) ? Vector3.right : Vector3.back) * 240;
 
 
         if (Level % 2 == 0)
