@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCube: {fileID: 1345627246}
-  lastCube: {fileID: 0}
+  lastCube: {fileID: 1345627246}
   text: {fileID: 851831688}
   Level: 0
   Done: 0
@@ -655,9 +655,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4465091642527239143, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465091642527239143, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465091642527239143, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465091642527239143, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65be59773782d6c42bcadb1715205951, type: 2}
     - target: {fileID: 6682938370628227434, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6682938370628227434, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3f2f09d120723843a5e99e176fc024d, type: 3}
