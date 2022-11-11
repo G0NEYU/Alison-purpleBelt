@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     private GameObject player;
     private bool gameStarted = false;
-
+    public GameObject splash;
     // Start is called before the first frame update
     void Start()
     {
         spawner.active = false;
         title.SetActive(true);
+        splash.SetActive(false);
     }
 
     
@@ -28,8 +29,23 @@ public class GameManager : MonoBehaviour
             {
                 ResetGame();
             }
+        } else
+        {
+            if (!player)
+            {
+                OnPlayerKilled();
+            }
         }
-       
+
+        var nextBomb = GameObject.FindGameObjectsWithTag("bomb");
+        foreach (GameObject bombObject in nextBomb)
+        {
+            if (bombObject.transform.position.y < (-screenbounds.y) -12 || !gameStarted)
+            {
+                Destroy(bombObject);
+            }
+        }
+
     }
     private void Awake()
     {
@@ -45,6 +61,9 @@ public class GameManager : MonoBehaviour
             Debug.Log(title.activeInHierarchy);
             title.SetActive(false);
             spawner.active = true;
+            splash.SetActive(false);
+            player = Instantiate(playerPrefab, new Vector3(0, 0, 0), playerPrefab.transform.rotation);
+            gameStarted = true;
 
         }
 
@@ -59,9 +78,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-     void ResetGame ()
+   
+
+    void OnPlayerKilled()
     {
-        
+        spawner.active = false;
+        gameStarted = false;
+        splash.SetActive(true);
     }
 
 } 
