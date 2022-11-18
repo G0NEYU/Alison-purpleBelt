@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private spawner spawner;
     public GameObject title;
-    private Vector2 screenbounds;
+    private Vector2 screenBounds;
     public GameObject playerPrefab;
     private GameObject player;
     private bool gameStarted = false;
     public GameObject splash;
+    public GameObject scoreSystem;
+    public Text scoreText;
+    public int pointsWorth = 1;
+    private int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +45,11 @@ public class GameManager : MonoBehaviour
         var nextBomb = GameObject.FindGameObjectsWithTag("bomb");
         foreach (GameObject bombObject in nextBomb)
         {
-            if (bombObject.transform.position.y < (-screenbounds.y) -12 || !gameStarted)
+            if (bombObject.transform.position.y < (-screenBounds.y) -12 || !gameStarted)
             {
+                scoreSystem.GetComponent<Score>().AddScore(pointsWorth);
                 Destroy(bombObject);
+                Debug.Log("add score");
             }
         }
 
@@ -50,8 +57,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         spawner = GameObject.Find("Spawner").GetComponent<spawner>();
-        screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         player = playerPrefab;
+        scoreText.enabled = false;
+
     } 
 
    void  ResetGame()
@@ -65,17 +74,28 @@ public class GameManager : MonoBehaviour
             player = Instantiate(playerPrefab, new Vector3(0, 0, 0), playerPrefab.transform.rotation);
             gameStarted = true;
 
+            scoreText.enabled = true;
+            scoreSystem.GetComponent<Score>().score = 0;
+            scoreSystem.GetComponent<Score>().Start();
+
         }
 
-        var nextBomb = GameObject.FindGameObjectsWithTag("Bomb");
+        //var nextBomb = GameObject.FindGameObjectsWithTag("bomb");
 
-        foreach (GameObject bombObject in nextBomb)
-        {
-            if (bombObject.transform.position.y < (screenbounds.y) - 12)
-            {
-                Destroy(bombObject);
-            }
-        }
+        //foreach (GameObject bombObject in nextBomb)
+        //    if (!gameStarted)
+        //    {
+        //        Destroy(bombObject);
+        //    } else if (bombObject.transform.position.y < (-screenBounds.y) && gameStarted)
+        //{
+        //        scoreSystem.GetComponent<Score>().AddScore(pointsWorth);
+        //        Debug.Log("add score");
+        //        Destroy(bombObject);
+        //    //if (bombObject.transform.position.y < (screenbounds.y) - 12)
+        //    //{
+        //    //    Destroy(bombObject);
+        //    //}
+        //}
     }
 
    
