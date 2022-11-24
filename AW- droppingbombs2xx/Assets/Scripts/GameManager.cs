@@ -34,8 +34,7 @@ public class GameManager : MonoBehaviour
             {
                 ResetGame();
             }
-        } else
-        {
+        } else {
             if (!player)
             {
                 OnPlayerKilled();
