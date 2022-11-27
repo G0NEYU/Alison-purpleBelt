@@ -44,8 +44,7 @@ public class GameManager : MonoBehaviour
         var nextBomb = GameObject.FindGameObjectsWithTag("bomb");
         foreach (GameObject bombObject in nextBomb)
         {
-            if (bombObject.transform.position.y < (-screenBounds.y) -12 || !gameStarted) 
-                //if the bombs y is to about -12 it would destroy the bomb object and add a point to the score
+            if (bombObject.transform.position.y < (-screenBounds.y) -12 || !gameStarted)
             {
                 scoreSystem.GetComponent<Score>().AddScore(pointsWorth);
                 Destroy(bombObject);
