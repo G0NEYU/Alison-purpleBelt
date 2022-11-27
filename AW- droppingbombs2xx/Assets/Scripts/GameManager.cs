@@ -16,12 +16,23 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public int pointsWorth = 1;
     private int score;
+
+    private bool smokeCleared = true;
+
+    private int bestScore = 0;
+    public Text bestScoreText;
+    private bool beatBestScore;
     // Start is called before the first frame update
+
+  
     void Start()
     {
         spawner.active = false;
         title.SetActive(true);
         splash.SetActive(false);
+
+        bestScore = PlayerPrefs.GetInt("BestScore");
+        bestScoreText.text = "Best Score :" + bestScore.ToString();
     }
 
     
@@ -30,8 +41,9 @@ public class GameManager : MonoBehaviour
     {
         if (!gameStarted)
         {
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown && smokeCleared)
             {
+                smokeCleared = false;
                 ResetGame();
             }
         } else {
@@ -77,6 +89,9 @@ public class GameManager : MonoBehaviour
             scoreSystem.GetComponent<Score>().score = 0;
             scoreSystem.GetComponent<Score>().Start();
 
+            beatBestScore = false;
+            bestScoreText.enabled = true;
+
         }
 
         //var nextBomb = GameObject.FindGameObjectsWithTag("bomb");
@@ -103,9 +118,23 @@ public class GameManager : MonoBehaviour
     {
         spawner.active = false;
         gameStarted = false;
+        Invoke("SplashScreen", 2f);
+        // Debug.Log("killed"); 
+        score = scoreSystem.GetComponent<Score>().score;
+        if(score > bestScore)
+        {
+            bestScore = score;
+            PlayerPrefs.SetInt("BestScore", bestScore);
+            beatBestScore = true;
+            bestScoreText.text = "Best Score:" + bestScore.ToString();
+
+        }
+    }
+    void SplashScreen ()
+    {
+        smokeCleared = true;
         splash.SetActive(true);
     }
-
 } 
 
  
