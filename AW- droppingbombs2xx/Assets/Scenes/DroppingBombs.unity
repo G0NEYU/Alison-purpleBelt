@@ -256,7 +256,7 @@ MonoBehaviour:
   scoreSystem: {fileID: 122544157}
   scoreText: {fileID: 1776747295}
   pointsWorth: 1
-  bestScoreText: {fileID: 0}
+  bestScoreText: {fileID: 1595373384}
 --- !u!4 &58884874
 Transform:
   m_ObjectHideFlags: 0
@@ -1459,8 +1459,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269.18555, y: 120.34125}
-  m_SizeDelta: {x: 182.5676, y: 65.0831}
+  m_AnchoredPosition: {x: 29.7356, y: 175.0699}
+  m_SizeDelta: {x: 450.0387, y: 62.9433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595373384
 MonoBehaviour:
@@ -1495,7 +1495,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BestScore : 0.'
+  m_Text: 'BestScore : 0'
 --- !u!222 &1595373385
 CanvasRenderer:
   m_ObjectHideFlags: 0

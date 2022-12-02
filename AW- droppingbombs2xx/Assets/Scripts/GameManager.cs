@@ -39,32 +39,53 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameStarted)
+
+
+
+        if (Input.anyKeyDown && smokeCleared && !gameStarted)
         {
-            if (Input.anyKeyDown && smokeCleared)
-            {
-                smokeCleared = false;
-                ResetGame();
-            }
-        } else {
+            smokeCleared = false;
+            ResetGame();
+        }
+        else
+        {
             if (!player)
             {
                 OnPlayerKilled();
             }
         }
-
         var nextBomb = GameObject.FindGameObjectsWithTag("bomb");
         foreach (GameObject bombObject in nextBomb)
         {
-            if (bombObject.transform.position.y < (-screenBounds.y) -12 || !gameStarted)
+            if (bombObject.transform.position.y < (-screenBounds.y) - 12 || !gameStarted)
             {
                 scoreSystem.GetComponent<Score>().AddScore(pointsWorth);
                 Destroy(bombObject);
                 Debug.Log("add score");
             }
         }
+        if (!gameStarted)
+        {
+            var textColor = "323232";
+            if (beatBestScore)
+            {
+                textColor = "#F00";
+            }
 
-    }
+            bestScoreText.text = "<color=" + textColor + ">Best Score: " + bestScore.ToString() + "</color>";
+
+        }
+        else
+        {
+            bestScoreText.text = "";
+
+
+        }
+
+
+
+
+     }
     private void Awake()
     {
         spawner = GameObject.Find("Spawner").GetComponent<spawner>();
