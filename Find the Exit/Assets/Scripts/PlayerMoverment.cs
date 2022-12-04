@@ -15,9 +15,15 @@ public class PlayerMoverment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal")
+        float horizontal = Input.GetAxisRaw("Horizontal");
+
+        //Input.GetAxis("horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        Vector3 destination = new Vector3(horizontal, 0, vertical);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-      
+        transform.Translate(destination * speed * Time.deltaTime);
+
+
 
     }
 }
