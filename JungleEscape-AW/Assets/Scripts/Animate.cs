@@ -21,7 +21,7 @@ public class Animate : MonoBehaviour
            // Animator.SetBool("isJumping, true");
             //Animator.SetBool("isIdle, false");
            // Anima
-        } /
+        } 
         if (Jump.isGrounded)
         {
             if (Input.GetAxisRaw("Vertical") ==1)
