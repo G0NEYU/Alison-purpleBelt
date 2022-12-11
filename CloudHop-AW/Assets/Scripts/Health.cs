@@ -58,7 +58,7 @@ public class Health : MonoBehaviour
         if(other.CompareTag("log")){
             Destroy(other.gameObject);
             if(health < 1){
-                health += .1f;
+                health += .2f;
                 healthBar.localScale = new Vector2 (health, 1);
                 size+=0.07f;
                 transform.localScale = new Vector2(size, size);
