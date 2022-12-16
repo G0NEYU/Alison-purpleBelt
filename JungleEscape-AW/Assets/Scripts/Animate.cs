@@ -18,19 +18,27 @@ public class Animate : MonoBehaviour
     {
         if (!Jump.isGrounded)
         {
-           // Animator.SetBool("isJumping, true");
-            //Animator.SetBool("isIdle, false");
-           // Anima
+           Animator.SetBool("isJumping", true);
+            Animator.SetBool("isIdle", false);
+            Animator.SetBool("isWalking", false);
+            Animator.SetBool("isWalkingBackwards", false);
+
         } 
         if (Jump.isGrounded)
         {
             if (Input.GetAxisRaw("Vertical") ==1)
             {
-
+                Animator.SetBool("isIdle", true);
+                Animator.SetBool("isWalking", false);
+                Animator.SetBool("isWalkingBackwards", false);
+                    
             } 
             if(Input.GetAxisRaw("Vertical") ==-1)
             {
-
+            
+                Animator.SetBool("IsWalkingBackwards", true);
+                Animator.SetBool("IsWalking", false);
+                Animator.SetBool("IsIdle", false);
             }
         }
     }
