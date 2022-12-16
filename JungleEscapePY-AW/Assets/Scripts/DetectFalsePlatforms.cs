@@ -7,6 +7,6 @@ public class DetectFalsePlatforms : MonoBehaviour
 
     void Update()
     {
-
+       
     }
 }
