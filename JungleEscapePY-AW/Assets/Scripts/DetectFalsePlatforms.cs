@@ -13,7 +13,7 @@ public class DetectFalsePlatforms : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2f , layerMask))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            Debug.Log("Careful ahead");
+            Debug.LogWarning("Careful ahead");
         }
         else
         {
