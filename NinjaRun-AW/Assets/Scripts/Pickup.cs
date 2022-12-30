@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pickups : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
     public int score;
     public Text scoreText;
 
-    public ParticleSystem Pickups;
+    public ParticleSystem poof;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("coin"))
@@ -16,8 +16,8 @@ public class Pickups : MonoBehaviour
             score++;
             scoreText.text = score.ToString();
             Destroy(other.gameObject);
-
-            Pickups.Play();
+            Debug.Log("Score: " + score);
+            poof.Play();
 
         }
 
@@ -26,7 +26,8 @@ public class Pickups : MonoBehaviour
 
         void Start()
         {
-        Pickups.Stop();
+        poof.Stop();
+        score = 0;
         }
 
         void Update()

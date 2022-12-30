@@ -13,13 +13,13 @@ public class GameOver : MonoBehaviour
 
     public GameObject GameOverScreen;
     public Text gameOverScoreText;
-    Pickups Pickups;
+    Pickup coin;
 
     void Start()
     {
         PlatformGeneration = platformGenerator.GetComponent<PlatformGeneration>();
         PlatformDestroyer = PlatformGeneration.platforms[1].GetComponent<PlatformDestroyer>();
-        Pickups = GetComponent<Pickups>();
+        coin = GetComponent<Pickup>();
         Movement = GetComponent<Movement>();
 
         GameOverScreen.SetActive(false);
