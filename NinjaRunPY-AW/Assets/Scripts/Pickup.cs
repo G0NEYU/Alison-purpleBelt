@@ -5,13 +5,15 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     // Start is called before the first frame update 
-
+    public ParticleSystem poof;
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger Enter");
         if (other.gameObject.CompareTag("coin"))
         {
             Destroy(other.gameObject);
+            GameObject door = GameObject.Find("door");
+            Destroy(door);
             
         }
     }

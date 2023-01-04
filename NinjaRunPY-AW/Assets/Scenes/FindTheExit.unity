@@ -158,6 +158,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000002, y: 2.0000002, z: 2.000001}
   m_Center: {x: 0.00000011920929, y: -1.0164395e-20, z: -0.00000017881398}
+--- !u!114 &74602105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74602095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c2c00cdaad58c42a3752abff24c50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poof: {fileID: 521643985}
 --- !u!1001 &81725565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3094,7 +3107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268341939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.53, y: 2.09, z: 19.97}
+  m_LocalPosition: {x: -10.53, y: 2.09, z: 20.13}
   m_LocalScale: {x: 3.5, y: 4.3, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3132,6 +3145,7 @@ GameObject:
   - component: {fileID: 1284053621}
   - component: {fileID: 1284053619}
   - component: {fileID: 1284053623}
+  - component: {fileID: 1284053624}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3210,6 +3224,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1892903568}
+--- !u!114 &1284053624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284053618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c2c00cdaad58c42a3752abff24c50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poof: {fileID: 0}
 --- !u!1 &1294329856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 1a3e3b7e3e65ab74b85d4b467c829b59, type: 3}
@@ -3481,7 +3508,7 @@ BoxCollider:
   m_GameObject: {fileID: 1340297804}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.4735126, y: 4.0939264, z: 6.3713417}
   m_Center: {x: -3.701167, y: -0.2468772, z: 4.026808}
@@ -3998,6 +4025,10 @@ PrefabInstance:
       value: 1.6159611
       objectReference: {fileID: 0}
     - target: {fileID: 748992279688134215, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748992279688134215, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
       propertyPath: m_Center.x
       value: 0.2125473
       objectReference: {fileID: 0}
@@ -4090,7 +4121,7 @@ PrefabInstance:
       value: 0.8039216
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 748992279688134216, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
 --- !u!1001 &1434715600
 PrefabInstance:
@@ -6279,7 +6310,6 @@ GameObject:
   - component: {fileID: 7520121438660743011}
   - component: {fileID: 2895836570380660515}
   - component: {fileID: 2895836570380660516}
-  - component: {fileID: 7520121438660743012}
   m_Layer: 0
   m_Name: Codey
   m_TagString: Untagged
@@ -7366,18 +7396,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7520121438660743012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2895836570380660514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c2c00cdaad58c42a3752abff24c50a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7603339309757305056
 Transform:
   m_ObjectHideFlags: 0
