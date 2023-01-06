@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 86
+  controlID: 104
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 87
+  controlID: 105
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 88
+  controlID: 106
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,23 +330,23 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 545e0000
-    m_LastClickedID: 24148
-    m_ExpandedIDs: 00000000525e0000
+    m_SelectedIDs: 925d0000
+    m_LastClickedID: 23954
+    m_ExpandedIDs: 000000007c5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scripts
-      m_OriginalName: Scripts
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25838
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000007c5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b0640000
+      m_SelectedIDs: a05d0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 689bffff089fffff26abffffc8d7ffff3adcffff32e4ffff46edffffb0edffff32fbffff
+      m_ExpandedIDs: a6a8fdff5eb1fdff2ab3fdffd057feffe457feffc858feffb059feff785dfeff1461feff2c65feffbe7ffeff8686feff0890feff4295feff60b0feff1ab5feff58bdfeff1ed6feff8eddfeff6af5feff0af7feff74fbfeffb0fffeff0a03ffffe406ffff3c0bffff9612ffffde16ffffae2dffffb02dffff983bffffe23fffff6044ffff2049ffff804fffff1458ffff1658ffff685cffff4461ffffa274ffffa474ffff8278ffff6e7dffffd885ffff428bffff288fffffa694ffff86c6ffff2ecfffff60d8ffff74d8ffffb6dbffff64e1ffff96e4ffff3ce9ffff1af2ffff36fbffff34770000448d00009c8d00002af2000060f20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -558,9 +558,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: -223.79999}
+      snapOffset: {x: -141, y: 149}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.8355605, y: 10.201988, z: -2.0282125}
+    m_Target: {x: -9.363437, y: 1.6173589, z: 1.1057308}
     speed: 2
-    m_Value: {x: 0.8355605, y: 10.201988, z: -2.0282125}
+    m_Value: {x: -9.363437, y: 1.6173589, z: 1.1057308}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -788,20 +788,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.6066604, y: 0.009774894, z: -0.007459354, w: -0.7948675}
+    m_Target: {x: -0.056703825, y: 0.7373533, z: -0.06225613, w: -0.6701762}
     speed: 2
-    m_Value: {x: -0.6066597, y: 0.009774882, z: -0.0074593453, w: -0.79486656}
+    m_Value: {x: -0.056706175, y: 0.73738384, z: -0.06225871, w: -0.670204}
   m_Size:
-    m_Target: 12.301168
+    m_Target: 4.668063
     speed: 2
-    m_Value: 11.771453
+    m_Value: 4.668063
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.2403799
-    m_SpeedNormalized: 0.61999995
+    m_Speed: 1.12044
+    m_SpeedNormalized: 0.56
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -931,10 +931,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 7.2000003
-    y: 499.2
-    width: 1159.8
-    height: 269.00003
+    x: 0
+    y: 500.80002
+    width: 1171
+    height: 274.59998
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
