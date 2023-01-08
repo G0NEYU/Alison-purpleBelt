@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 104
+  controlID: 116
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 105
+  controlID: 117
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 106
+  controlID: 118
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,36 +317,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Code Ninjas Markham\Documents\Alison-purpleBelt\AW-DoctorWorm
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 925d0000
-    m_LastClickedID: 23954
-    m_ExpandedIDs: 000000007c5d0000
+    m_SelectedIDs: f65d0000
+    m_LastClickedID: 24054
+    m_ExpandedIDs: 00000000ba5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Teleportation Pad
+      m_OriginalName: Teleportation Pad
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 24056
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c5d0000
+    m_ExpandedIDs: 00000000ba5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,23 +488,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a05d0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: a6a8fdff5eb1fdff2ab3fdffd057feffe457feffc858feffb059feff785dfeff1461feff2c65feffbe7ffeff8686feff0890feff4295feff60b0feff1ab5feff58bdfeff1ed6feff8eddfeff6af5feff0af7feff74fbfeffb0fffeff0a03ffffe406ffff3c0bffff9612ffffde16ffffae2dffffb02dffff983bffffe23fffff6044ffff2049ffff804fffff1458ffff1658ffff685cffff4461ffffa274ffffa474ffff8278ffff6e7dffffd885ffff428bffff288fffffa694ffff86c6ffff2ecfffff60d8ffff74d8ffffb6dbffff64e1ffff96e4ffff3ce9ffff1af2ffff36fbffff34770000448d00009c8d00002af2000060f20000
+      m_SelectedIDs: 0648ffff
+      m_LastClickedID: -47098
+      m_ExpandedIDs: 3647ffff4a47ffff1649ffffb64dffff1650ffff9468ffffa868ffff1c6cffffc474ffffd874ffffc075ffff7890ffff8c90ffff0294ffffa49effffb89effff84a0ffffd8bcffff76c0ffff8ac0ffff1ec2ffff32c2ffff20c4ffff80ddffff94ddffff7cdeffffaae2ffffd2faffff36fbffffca6500001e900000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Laser
+        m_OriginalName: Laser
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -28552
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -547,8 +547,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -100, y: -25.600006}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -722,7 +722,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.363437, y: 1.6173589, z: 1.1057308}
+    m_Target: {x: 10.36774, y: -15.244814, z: -39.844532}
     speed: 2
-    m_Value: {x: -9.363437, y: 1.6173589, z: 1.1057308}
+    m_Value: {x: 10.36774, y: -15.244814, z: -39.844532}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -788,13 +788,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.056703825, y: 0.7373533, z: -0.06225613, w: -0.6701762}
+    m_Target: {x: 0.00936234, y: 0.9659764, z: -0.25585148, w: 0.035681844}
     speed: 2
-    m_Value: {x: -0.056706175, y: 0.73738384, z: -0.06225871, w: -0.670204}
+    m_Value: {x: 0.009746441, y: 0.96595496, z: -0.25584593, w: 0.037132043}
   m_Size:
-    m_Target: 4.668063
+    m_Target: 18.33588
     speed: 2
-    m_Value: 4.668063
+    m_Value: 17.546297
   m_Ortho:
     m_Target: 0
     speed: 2
