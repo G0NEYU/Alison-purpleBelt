@@ -33,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
             //speed = speed * -1;
             xDirection = -1;
             enemyRigidBody.AddForce(Vector2.left * xForce);
+
         }
     
         
@@ -58,6 +59,37 @@ public class EnemyMovement : MonoBehaviour
             Vector2 jumpForce = new Vector2(xForce * xDirection, yForce);
             enemyRigidBody.AddForce(jumpForce);
         }
-    }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Transform enemyPosition = collision.gameObject.transform;
+           //transform.position.x;
+           // enemyPosition.position.x;
+            if (transform.position.x <= enemyPosition.position.x) 
+            {
+                xDirection = 1;
+                enemyRigidBody.AddForce(Vector2.right * xForce);
+            } 
+
+            if ((transform.position.x >= enemyPosition.position.x)) 
+                {
+
+                xDirection = -1;
+                enemyRigidBody.AddForce(Vector2.right * xForce);
+            }
+            
+            Vector2 jumpForce = new Vector2(xForce * xDirection, yForce);
+            enemyRigidBody.AddForce(jumpForce);
+        } 
+        if (collision.gameObject.tag == "enemy")
+        {
+            Vector2 Force = new Vector2(yForce * xDirection, xForce);
+            enemyRigidBody.AddForce(Force);
+        }
+
+        
+    } 
+
+   
 
 }
