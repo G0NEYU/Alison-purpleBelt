@@ -18,6 +18,14 @@ public class EnemyMovement : MonoBehaviour
         enemyRigidBody = GetComponent<Rigidbody2D>();
     }
 
+
+    private void Update()
+    {
+        
+      
+          //  Rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        
+    }
     private void FixedUpdate()
     {
 
@@ -48,7 +56,7 @@ public class EnemyMovement : MonoBehaviour
     
    
     // Update is called once per frame
-    void Update()
+    void FixedU()
     {
         
     }
@@ -68,23 +76,25 @@ public class EnemyMovement : MonoBehaviour
             if (transform.position.x <= enemyPosition.position.x) 
             {
                 xDirection = 1;
-                enemyRigidBody.AddForce(Vector2.right * xForce);
+                enemyRigidBody.AddForce(new Vector2(-xForce,0));
             } 
 
             if ((transform.position.x >= enemyPosition.position.x)) 
                 {
 
                 xDirection = -1;
-                enemyRigidBody.AddForce(Vector2.right * xForce);
+                enemyRigidBody.AddForce(new Vector2( xForce,0));
             }
             
-            Vector2 jumpForce = new Vector2(xForce * xDirection, yForce);
+            Vector2 jumpForce = new Vector2(-xForce * xDirection, -xForce);
             enemyRigidBody.AddForce(jumpForce);
         } 
         if (collision.gameObject.tag == "enemy")
-        {
-            Vector2 Force = new Vector2(yForce * xDirection, xForce);
-            enemyRigidBody.AddForce(Force);
+
+        { 
+            Vector2 jumpForce = new Vector2(-xForce * xDirection, -xForce);
+            enemyRigidBody.AddForce(jumpForce);
+           
         }
 
         

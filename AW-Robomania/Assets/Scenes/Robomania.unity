@@ -1814,8 +1814,8 @@ GameObject:
   - component: {fileID: 1163686246}
   - component: {fileID: 1163686251}
   - component: {fileID: 1163686252}
-  - component: {fileID: 1163686253}
   - component: {fileID: 1163686254}
+  - component: {fileID: 1163686255}
   m_Layer: 0
   m_Name: Crusher1
   m_TagString: Enemy
@@ -1949,21 +1949,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.51, y: 0.51}
   m_EdgeRadius: 0
---- !u!114 &1163686253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163686245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d021816a7652b84fab974dcb5d38bb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yForce: 0
-  xForce: 0
-  xDirection: 0
 --- !u!50 &1163686254
 Rigidbody2D:
   serializedVersion: 4
@@ -1985,6 +1970,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1163686255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163686245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfa9e2f3f29ed54eaba203c7b2e501e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yForce: 700
+  xForce: 130
+  xDirection: -1
 --- !u!1 &1169863300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,9 +2426,9 @@ GameObject:
   - component: {fileID: 1604866802}
   - component: {fileID: 1604866801}
   - component: {fileID: 1604866800}
-  - component: {fileID: 1604866804}
   - component: {fileID: 1604866805}
   - component: {fileID: 1604866806}
+  - component: {fileID: 1604866807}
   m_Layer: 0
   m_Name: Crusher2
   m_TagString: Enemy
@@ -2536,21 +2536,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1604866804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604866796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d021816a7652b84fab974dcb5d38bb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yForce: 0
-  xForce: 0
-  xDirection: 0
 --- !u!61 &1604866805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2597,7 +2582,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1604866807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604866796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfa9e2f3f29ed54eaba203c7b2e501e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yForce: 400
+  xForce: 140
+  xDirection: 1
 --- !u!1 &1678837115
 GameObject:
   m_ObjectHideFlags: 0
