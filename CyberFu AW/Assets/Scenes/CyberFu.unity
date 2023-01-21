@@ -518,7 +518,7 @@ MonoBehaviour:
     minValue: 1
     maxValue: 10
   bloomScattering: 1
-  bloomIntensity: 3.4
+  bloomIntensity: 3.31
 --- !u!1 &1149558803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2808907689783890032, guid: 34a17991105008e499630abd765bfa09, type: 3}
@@ -879,6 +879,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8633964454457462341, guid: 34a17991105008e499630abd765bfa09, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8633964454457462341, guid: 34a17991105008e499630abd765bfa09, type: 3}
+      propertyPath: isAttackingTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8633964454457462341, guid: 34a17991105008e499630abd765bfa09, type: 3}
+      propertyPath: isFollowingTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1149558812, guid: 34a17991105008e499630abd765bfa09, type: 3}
       propertyPath: scoreText
       value: 

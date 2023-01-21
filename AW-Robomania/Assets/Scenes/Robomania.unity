@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yForce: 300
-  xForce: 130
+  xForce: 500
   xDirection: -1
 --- !u!1 &1169863300
 GameObject:
@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yForce: 400
-  xForce: 140
+  xForce: 300
   xDirection: 1
 --- !u!1 &1678837115
 GameObject:

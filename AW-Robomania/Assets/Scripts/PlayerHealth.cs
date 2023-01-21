@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     private GameObject explosionResource;
 
     // set the player's health to 100
-    private int health = 100;
+    private int health = 1;
 
 
     // grab RoboMan's sprite renderer and other resources to use later
