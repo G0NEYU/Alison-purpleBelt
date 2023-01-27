@@ -524,6 +524,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2808907689783890032, guid: 34a17991105008e499630abd765bfa09, type: 3}
   m_PrefabInstance: {fileID: 1598450700253763810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1149558810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149558803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5086efe10254ee418b0996dba247ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  attackingDistance: 1
+  direction: {x: 0, y: 0, z: 0}
+  isFollowingTarget: 0
+  isAttackingTarget: 0
+  currentAttackingTime: 0
 --- !u!1 &1195994594
 GameObject:
   m_ObjectHideFlags: 0

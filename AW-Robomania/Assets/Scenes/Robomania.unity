@@ -1982,8 +1982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfa9e2f3f29ed54eaba203c7b2e501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yForce: 300
-  xForce: 130
+  yForce: 400
+  xForce: 700
   xDirection: -1
 --- !u!1 &1169863300
 GameObject:
@@ -2595,8 +2595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfa9e2f3f29ed54eaba203c7b2e501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yForce: 400
-  xForce: 140
+  yForce: 300
+  xForce: 400
   xDirection: 1
 --- !u!1 &1678837115
 GameObject:
