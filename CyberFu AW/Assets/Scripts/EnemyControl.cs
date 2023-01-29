@@ -17,6 +17,7 @@ public class EnemyControl : MonoBehaviour
     private Animator  animatorEnemy;
     private Rigidbody rigidbodyEnemy;
     private Transform target;
+    public EnemyControl attack;
     void Start()
     {
         isFollowingTarget = true;
@@ -31,12 +32,17 @@ public class EnemyControl : MonoBehaviour
     {
         if (!isFollowingTarget)
         {
+            rigidbodyEnemy.isKinematic = true;
             return;
+
+
         }
 
         if (Vector3.Distance(transform.position, target.position) >=
             attackingDistance)
         {
+            rigidbodyEnemy.isKinematic = false;
+            
             direction = target.position - transform.position;
             direction.y = 0;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 100);
@@ -49,6 +55,7 @@ public class EnemyControl : MonoBehaviour
         else if(Vector3.Distance(transform.position, 
             target.position) <= attackingDistance)
         {
+            rigidbodyEnemy.isKinematic = false;
             rigidbodyEnemy.velocity = Vector3.zero;
             animatorEnemy.SetBool("Walk", false);
             isFollowingTarget = false;
@@ -81,9 +88,12 @@ public class EnemyControl : MonoBehaviour
 
         if (currentAttackingTime > maxAttackingTime)
         {
+            EnemyAttack(Random.Range(1, 6));
             currentAttackingTime = 0f;
-            animatorEnemy.SetTrigger("Attack1");
+            
         } 
+
+
 
     }
 
@@ -97,7 +107,28 @@ public class EnemyControl : MonoBehaviour
         if (attack ==1 )
         {
             animatorEnemy.SetTrigger("Attack1");
+        } 
+        if (attack ==2)
+        {
+            animatorEnemy.SetTrigger("Attack2");
+        } 
+        if (attack ==3)
+        {
+            animatorEnemy.SetTrigger("Attack3");
+        } 
+        if (attack ==4)
+        {
+            animatorEnemy.SetTrigger("Attack4");
         }
+        if(attack==5)
+        {
+            animatorEnemy.SetTrigger("Attack5");
+        } 
+        if(attack==6)
+        {
+            animatorEnemy.SetTrigger("Attack6");
+        }
+
     } 
 }
 
