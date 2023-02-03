@@ -34,7 +34,7 @@ public class EnemyControl : MonoBehaviour
         {
             rigidbodyEnemy.isKinematic = true;
             return;
-
+           
 
         }
 
