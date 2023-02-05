@@ -37,7 +37,6 @@ public class HazardFiring : MonoBehaviour
         // and a vector is made from the current position to the target
         
         target = player.transform.position;
-
         HazardMoveDirection = target - transform.position;
 
         if (Time.time > nextFire)
@@ -47,6 +46,11 @@ public class HazardFiring : MonoBehaviour
             /*****************************\
             |**** Add your code below ****|
             \*****************************/
+            GameObject hazardClone = Instantiate(hazard, transform.position, transform.rotation);
+            Rigidbody hazardrigidBody = hazardClone.GetComponent<Rigidbody>();
+            hazardrigidBody.velocity = HazardMoveDirection.normalized * speed;
+            Debug.Log(HazardMoveDirection.normalized * speed );
+            
 
 
             /*****************************\
