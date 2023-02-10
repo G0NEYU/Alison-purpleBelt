@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3632139631492857891, guid: 9cd2235cef406814b9970102f2f41555, type: 3}
-  spawnRate: 8
+  FireRate: 6
 --- !u!4 &1353465360
 Transform:
   m_ObjectHideFlags: 0
@@ -1394,7 +1394,7 @@ MonoBehaviour:
   projectileForce: 0.1
   fireRate: 0.1
   currentLevel: 0
-  playerHealth: 100
+  playerHealth: 1000
   score: 0
   gameOver: 0
   projectile: {fileID: 1702623318685341940, guid: dec1d9b2efa0ca541b0a2ea4c3e44f26, type: 3}

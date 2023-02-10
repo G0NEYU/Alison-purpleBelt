@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
     public Vector3 EnemyVelocity;
     private PlayerControls playerController;
     private Rigidbody myRigidBody;
+    private Vector3 HazardMoveDirection;
 
     void Start() 
     {
@@ -64,6 +65,8 @@ public class EnemyController : MonoBehaviour
             // TODO this is a potential bug waiting to happen but who needs a second array to fix it
             // anyway, if the magnitude is greater than (or equal to) 1 then the EnemyVelocity is set to a normalized value
             // but multiplied by enemySpeed to allow more user control
+            Target = playerController.transform.position;
+            HazardMoveDirection = Target - transform.position;
             if (currentWaypoint < MovePatterns.Count)
             {
                 Target = MovePatterns[currentWaypoint].position;

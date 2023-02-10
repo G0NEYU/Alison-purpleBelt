@@ -11,8 +11,8 @@ public class EnemyEmitterController : MonoBehaviour
     // in the scene doesn't get doubled up with an immediate spawn
     public GameObject Enemy;
     private PlayerControls playerController;
-    public float spawnRate;
-    private float nextSpawn = 5.0f;
+    public float FireRate;
+    private float nextFire = 5.0f;
 
     void Start()
     {
@@ -29,9 +29,9 @@ public class EnemyEmitterController : MonoBehaviour
             return;
         }
         // Usual time delay code
-        if (Time.time > nextSpawn)
+        if (Time.time > nextFire)
         {
-            nextSpawn = Time.time + spawnRate;
+            nextFire = Time.time + FireRate;
 
             /*****************************\
             |**** Add your code below ****|
