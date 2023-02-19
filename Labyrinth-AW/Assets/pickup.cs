@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class pickup : MonoBehaviour
 {
-
+   
+   
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class pickup : MonoBehaviour
         if (other.gameObject.CompareTag("sphere")) {
             GameObject Wall =  GameObject.FindGameObjectWithTag("Wall");
             GameObject Sphere = GameObject.FindGameObjectWithTag("sphere");
-
+          
             Destroy(Wall.gameObject);
             Destroy(Sphere.gameObject);
         }

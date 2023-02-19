@@ -7,6 +7,7 @@ public class MoveToSphere : MonoBehaviour
     public Transform Sphere;
     private Animator animator;
     private NavMeshAgent agent;
+    public Transform goal;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +20,21 @@ public class MoveToSphere : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.hasPath)
+      
         {
-            animator.SetBool("isRunning", true);
+           //if (gameObject.)
+            //{
+              //  agent.destination = goal.position;
+            //}
+            if (agent.hasPath)
+            {
+                animator.SetBool("isRunning", true);
 
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
         }
     }
 }
