@@ -18,6 +18,16 @@ public class pickup : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         agent.destination = sphere.position;
+
+        if (agent.hasPath)
+        {
+            animator.SetBool("isRunning", true);
+
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
     }
 
     // Update is called once per frame
@@ -30,6 +40,7 @@ public class pickup : MonoBehaviour
 
             Destroy(Wall.gameObject);
             Destroy(Sphere.gameObject);
+            Debug.Log("Wall");
 
             agent.destination = goal.position;
             if (agent.hasPath)
