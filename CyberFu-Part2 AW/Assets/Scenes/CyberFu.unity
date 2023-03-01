@@ -678,7 +678,7 @@ MonoBehaviour:
     minValue: 1
     maxValue: 10
   bloomScattering: 1
-  bloomIntensity: 6.08
+  bloomIntensity: 5.24
 --- !u!1 &1049587589
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPlayerHealth: 0
+  enemyDamage: 2
+  particles: {fileID: 0}
 --- !u!1 &1195994594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1545,22 @@ PrefabInstance:
     - target: {fileID: 4417900310855894760, guid: c3788ac84e7066a49ab1c026d40254b3, type: 3}
       propertyPath: m_Name
       value: ItemSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417900310855894761, guid: c3788ac84e7066a49ab1c026d40254b3, type: 3}
+      propertyPath: spawnWait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417900310855894761, guid: c3788ac84e7066a49ab1c026d40254b3, type: 3}
+      propertyPath: startWait
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417900310855894761, guid: c3788ac84e7066a49ab1c026d40254b3, type: 3}
+      propertyPath: spawnLessWait
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417900310855894761, guid: c3788ac84e7066a49ab1c026d40254b3, type: 3}
+      propertyPath: spawnMostWait
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4417900310855894762, guid: c3788ac84e7066a49ab1c026d40254b3, type: 3}
       propertyPath: m_RootOrder
