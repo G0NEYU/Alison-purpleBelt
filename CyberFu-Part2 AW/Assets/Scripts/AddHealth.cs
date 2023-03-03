@@ -26,7 +26,7 @@ private void Start()
     // Update is called once per frame
     void Update()
     {
-        if(playerHealth){
+        if(playerHealth || true){
             //Debug.Log(playerHealth.currentPlayerHealth);
             healthText.text = playerHealth.currentPlayerHealth.ToString();
         }

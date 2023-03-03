@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerHealth : MonoBehaviour
 {
-    public int currentPlayerHealth = 10;
-    public int enemyDamage = 2;
+    public int currentPlayerHealth = 30;
+    public int enemyDamage = 4;
 
     public PlayerExplosionParticles particles;
 
     private Animator playerAnimator;
    
     void Start()
-    {
+    { 
+        
         playerAnimator = GetComponent<Animator>();
         particles = GetComponent<PlayerExplosionParticles>();
     }
      
     public void HurtPlayer()
     {
-        currentPlayerHealth -= enemyDamage; 
+        
+        enemyDamage = Random.Range(3, 11);
+        currentPlayerHealth -= enemyDamage;
 
         if (currentPlayerHealth <= 0 )
         {
