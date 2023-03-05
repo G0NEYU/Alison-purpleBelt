@@ -13,8 +13,8 @@ public class PlayerExplosionParticles : MonoBehaviour
     public float explosionRadius;
     public float explosionForce;
     public float explosionUpward;
-    public Text healthText;
-    PlayerHealth playerHealth;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +25,7 @@ public class PlayerExplosionParticles : MonoBehaviour
     
     private void Update()
     {
-
-        if (playerHealth || true)
-        {
-            //Debug.Log(playerHealth.currentPlayerHealth);
-            healthText.text = playerHealth.currentPlayerHealth.ToString();
-        }
+        
     }
 
     public void Explode()

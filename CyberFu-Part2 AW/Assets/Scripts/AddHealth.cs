@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 public class AddHealth : MonoBehaviour
 {
-    public Text healthText;
-    PlayerHealth playerHealth;
+   public Text healthText;
+   PlayerHealth playerHealth;
 
     // Start is called before the first frame update
 private void Start()
     {
-        GameObject BluePlayer = GameObject.Find("BluePlayer");
+        GameObject BluePlaye9r = GameObject.Find("BluePlayer");
+ 
 
-        playerHealth = BluePlayer.GetComponent<PlayerHealth>();
+        playerHealth = BluePlaye9r.GetComponent<PlayerHealth>();
         if (!playerHealth)
         {
             healthText.text = "error";
@@ -26,9 +27,12 @@ private void Start()
     // Update is called once per frame
     void Update()
     {
-        if(playerHealth || true){
-            //Debug.Log(playerHealth.currentPlayerHealth);
-            healthText.text = playerHealth.currentPlayerHealth.ToString();
+        Debug.Log("00 mmm "+ playerHealth.currentPlayerHealth);
+        if (playerHealth || true)
+        {
+            Debug.Log(playerHealth.currentPlayerHealth);
+            healthText.text =Mathf.Max(0,  playerHealth.currentPlayerHealth).ToString();
+            ;
         }
     }
 

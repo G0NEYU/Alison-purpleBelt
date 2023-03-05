@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -12,14 +13,30 @@ public class PlayerHealth : MonoBehaviour
     public PlayerExplosionParticles particles;
 
     private Animator playerAnimator;
-   
+    public Text healthText;
+    PlayerHealth playerHealth;
+
+
+
     void Start()
     { 
         
         playerAnimator = GetComponent<Animator>();
         particles = GetComponent<PlayerExplosionParticles>();
+        GameObject BluePlayer = GameObject.Find("BluePlayer");
+        playerHealth = BluePlayer.GetComponent<PlayerHealth>();
     }
-     
+
+    private void Update()
+    {
+        if (playerHealth || true)
+        {
+          
+            //Debug.Log(playerHealth.currentPlayerHealth);
+            healthText.text = playerHealth.currentPlayerHealth.ToString();
+        }
+    }
+
     public void HurtPlayer()
     {
         
