@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5d7d971019f4449a31b30891cf6841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlayerHealth: 10
+  currentPlayerHealth: 23
   enemyDamage: 4
   particles: {fileID: 0}
   healthText: {fileID: 1529893634}
