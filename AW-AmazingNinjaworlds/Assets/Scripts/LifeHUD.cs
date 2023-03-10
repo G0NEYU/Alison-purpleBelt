@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LifeHUD : MonoBehaviour
 {
-    private GameObject[] heart;
+    public GameObject[] heart;
     private int lives = 3;
     public GameObject background;
     // Start is called before the first frame update
@@ -24,5 +24,19 @@ public class LifeHUD : MonoBehaviour
         Debug.Log("Ouch!");
         lives -= 1;
         heart[lives].SetActive(false);
+        if (lives == 0)
+        {
+            background.GetComponent<GameManager>().GameOver();
+            heart[lives].SetActive(false);
+        }
+    }
+    public void HealPlayer()
+    {
+        Debug.Log("Yay!");
+        if(lives < 3)
+        {
+            heart[lives].SetActive(true);
+            lives += 1;
+        } 
     }
 }

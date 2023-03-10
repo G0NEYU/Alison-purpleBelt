@@ -18,11 +18,18 @@ public class PickUpKey : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        HealthBar.GetComponent<LifeHUD>().HealPlayer();
+        Debug.Log("Hit!");
         m_renderer.enabled = false;
         m_particle.Stop();
         allParticles.Play();
-        //HealthBar.GetComponent<LifeHUD>().HealPlayer();
-        //Debug.Log("Hit!");
+       
     }
 
+
+
+    
 }
+
+
+
