@@ -2214,7 +2214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621597827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.875387, y: 7.5038776, z: -42.2}
+  m_LocalPosition: {x: 15.31542, y: 7.5038776, z: -42.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2723,6 +2723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 1875767817}
+  HealthBar: {fileID: 0}
 --- !u!4 &1776441888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a3614c18f3e6c7142832df541b2a093c, type: 3}
@@ -3653,6 +3654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 1875767817}
+  HealthBar: {fileID: 1698819397}
 --- !u!4 &365266794849478841
 Transform:
   m_ObjectHideFlags: 0

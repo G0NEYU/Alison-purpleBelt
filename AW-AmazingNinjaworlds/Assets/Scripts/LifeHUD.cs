@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script : MonoBehaviour
+public class LifeHUD : MonoBehaviour
 {
     private GameObject[] heart;
     private int lives = 3;
@@ -21,6 +21,8 @@ public class script : MonoBehaviour
 
     public void HurtPlayer()
     {
-
+        Debug.Log("Ouch!");
+        lives -= 1;
+        heart[lives].SetActive(false);
     }
 }
