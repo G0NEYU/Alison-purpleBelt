@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 2550477898664387029}
   m_Layer: 0
   m_Name: spikes
-  m_TagString: yellow
+  m_TagString: pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 1745804454675109988, guid: cb11f4d350db35c4b8beb319de1fc75e, type: 3}
-  m_Color: {r: 0.9921569, g: 1, b: 0.38823533, a: 1}
+  m_Color: {r: 1, g: 0.38823533, b: 0.47450984, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
