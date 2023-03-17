@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Colors.unity
     guid: a6da97cc1d96a734da23164704ceed0e
+  - enabled: 1
+    path: Assets/Scenes/GO.unity
+    guid: cd10b9bc4a4659d4a888931466ad3599
   m_configObjects: {}

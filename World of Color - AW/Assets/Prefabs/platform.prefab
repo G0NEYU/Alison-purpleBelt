@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7549806496382087479}
   m_Layer: 0
   m_Name: platform
-  m_TagString: yellow
+  m_TagString: blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -9176540338116390063, guid: cb11f4d350db35c4b8beb319de1fc75e, type: 3}
-  m_Color: {r: 0.9921569, g: 1, b: 0.38823533, a: 1}
+  m_Color: {r: 0.38823533, g: 0.7058824, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
