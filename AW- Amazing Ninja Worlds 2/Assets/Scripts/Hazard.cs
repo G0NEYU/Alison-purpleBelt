@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hazard : MonoBehaviour
 {       
@@ -13,7 +14,8 @@ public class Hazard : MonoBehaviour
     {
         // ask the background's game manager script to move the player to the checkpoint
         background.GetComponent<GameManager>().moveToCheckPoint();
-
+     
+      //  background.GetComponent<GameManager>().UpdateCheckPoint( new Vector3(0 , 0, 0));
         // ask the healthbar to hurt the player
         HealthBar.GetComponent<LifeHUD>().HurtPlayer();
     }

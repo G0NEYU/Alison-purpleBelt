@@ -11,13 +11,13 @@ public class GameManager : MonoBehaviour
     public GameObject popUp;
     public TextMeshProUGUI textMessage;
     public GameObject retryButton;
-    public TextMeshProUGUI buttonText;
-
     // Reference to Codey
     public GameObject player;
+    public Text buttonText;
+    
 
-    // A reference to a checkpoint with an initial value of the start of the level
-    public Vector3 checkPoint = new Vector3(-4.7f, 0.6f, 0);
+    //A reference to a checkpoint with an initial value of the start of the level
+    private Vector3 checkPoint = new Vector3(-4.7f, 0.6f, 0);
     
 
     void Start()
@@ -65,7 +65,9 @@ public class GameManager : MonoBehaviour
 
     public void UpdateCheckPoint(Vector3 newCheckPoint)
     {
-        
+        // player.transform.position = newCheckPoint;
+        Debug.Log("newCheckPoint");
+        checkPoint = newCheckPoint;
     }
 
     // load the specified scene

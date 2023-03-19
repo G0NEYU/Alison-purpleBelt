@@ -11,6 +11,8 @@ public class Checkpoint : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Vector3 newCheckpoint = transform.position;
-        background.GetComponent<GameManager>().checkPoint = newCheckpoint;
+        //background.GetComponent<GameManager>().checkPoint = newCheckpoint;
+        background.GetComponent<GameManager>().UpdateCheckPoint(newCheckpoint);
+        
     }
 }
