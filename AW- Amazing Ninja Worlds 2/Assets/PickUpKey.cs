@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class PickUpKey : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ParticleSystem teleporterDust;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameObject.SetActive(false);
+        teleporterDust.Play();
     }
 }

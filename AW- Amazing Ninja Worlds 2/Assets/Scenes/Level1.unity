@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 68873018}
   - component: {fileID: 68873017}
   - component: {fileID: 68873016}
+  - component: {fileID: 68873020}
   m_Layer: 0
   m_Name: TeleportPad
   m_TagString: Untagged
@@ -399,6 +400,21 @@ Transform:
   m_Father: {fileID: 1425964340}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68873020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68873015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d183321bb510244b3c92c5b7d79b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gem: {fileID: 468184293}
+  background: {fileID: 1875767817}
+  teleportDestination: Level1_A
 --- !u!4 &79126317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a3614c18f3e6c7142832df541b2a093c, type: 3}
@@ -766,7 +782,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10521,7 +10536,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15397,7 +15411,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20284,6 +20297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7069c015970eb114385324dae103a8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleporterDust: {fileID: 1639722400}
 --- !u!1001 &573553711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20546,6 +20560,7 @@ GameObject:
   - component: {fileID: 708178250}
   - component: {fileID: 708178249}
   - component: {fileID: 708178248}
+  - component: {fileID: 708178251}
   m_Layer: 0
   m_Name: checkPoint2
   m_TagString: Untagged
@@ -20634,6 +20649,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708178251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708178247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111566f6feeef61428c64e9db4825b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1875767817}
 --- !u!1 &802107911
 GameObject:
   m_ObjectHideFlags: 0
@@ -20994,7 +21022,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37062,7 +37089,7 @@ MonoBehaviour:
   textMessage: {fileID: 1174592290}
   retryButton: {fileID: 1882814584}
   player: {fileID: 2033886546947585900}
-  buttonText: {fileID: 0}
+  buttonText: {fileID: 140960189}
 --- !u!1 &1882814584
 GameObject:
   m_ObjectHideFlags: 0
@@ -37598,6 +37625,7 @@ GameObject:
   - component: {fileID: 2076439168}
   - component: {fileID: 2076439167}
   - component: {fileID: 2076439166}
+  - component: {fileID: 2076439169}
   m_Layer: 0
   m_Name: checkPoint1
   m_TagString: Untagged
@@ -37686,6 +37714,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076439169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076439165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111566f6feeef61428c64e9db4825b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1875767817}
 --- !u!1 &105260738426324717
 GameObject:
   m_ObjectHideFlags: 0
@@ -42540,7 +42581,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47365,7 +47405,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47964,6 +48003,7 @@ GameObject:
   - component: {fileID: 59417578}
   - component: {fileID: 59417577}
   - component: {fileID: 59417576}
+  - component: {fileID: 4965371492591462406}
   m_Layer: 0
   m_Name: Codey Variant
   m_TagString: Untagged
@@ -53617,6 +53657,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4965371492591462406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033886546947585900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7069c015970eb114385324dae103a8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleporterDust: {fileID: 1639722400}
 --- !u!4 &5060134854769075833
 Transform:
   m_ObjectHideFlags: 0

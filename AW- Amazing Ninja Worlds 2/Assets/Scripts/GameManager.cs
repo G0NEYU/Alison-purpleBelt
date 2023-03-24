@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject retryButton;
     // Reference to Codey
     public GameObject player;
-    public Text buttonText;
+    public TextMeshProUGUI buttonText;
     
 
     //A reference to a checkpoint with an initial value of the start of the level

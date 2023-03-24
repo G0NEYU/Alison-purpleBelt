@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         // by looking from Codey's center down 
         // but only look through the distance from Codey's center to his feet
         // if Codey is on the ground, then make sure his vertical velocity is 0
-        if (Physics.Raycast(transform.position, Vector3.down, centerOfCodeyToFeetDistance + 1f))
+        if (Physics.Raycast(transform.position, Vector3.down  *2, centerOfCodeyToFeetDistance + 1f))
         {
             verticalVelocity = 0;
             onGround = true;
