@@ -7,26 +7,24 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // References for UI elements
     public GameObject popUp;
     public TextMeshProUGUI textMessage;
-    public GameObject retryButton;
-    // Reference to Codey
     public GameObject player;
+    public Vector3 checkPoint = new Vector3(-4.7f, 0.6f, 0);
+    public GameObject retryButton;
     public TextMeshProUGUI buttonText;
-    
 
-    //A reference to a checkpoint with an initial value of the start of the level
-    private Vector3 checkPoint = new Vector3(-4.7f, 0.6f, 0);
-    
+    private AudioSource buttonSound;
+    public AudioClip ButtonClick;
+    public AudioClip Win;
 
+    // Start is called before the first frame update
     void Start()
     {
-        // make sure the pop up is not active
         popUp.SetActive(false);
-
-        // delete any previous lives data
-        PlayerPrefs.DeleteKey("LIVES_LEFT");
+        buttonSound = GetComponent<AudioSource>();
+        //for testing only. Remove for final.
+        //PlayerPrefs.DeleteKey("LIVES_LEFT");
     }
 
     private void Update()
@@ -34,7 +32,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Set the game over text and display the popup
     public void GameOver()
     {
         textMessage.text = "Keep Trying!";
@@ -44,20 +41,19 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteKey("LIVES_LEFT");
     }
 
-    // Set the success text and display the popup
     public void TeleportOpen(string nextScene)
     {
         textMessage.text = "Good Job!";
         retryButton.GetComponent<Button>().onClick.AddListener(delegate { Reset(nextScene); });
         buttonText.text = "Click to continue";
         popUp.SetActive(true);
+        buttonSound.PlayOneShot(Win);
         if(nextScene == "Level1")
         {
             PlayerPrefs.DeleteKey("LIVES_LEFT");
         }
     }
 
-    // teleport the player to the checkpoint
     public void moveToCheckPoint()
     {
         player.transform.position = checkPoint;
@@ -65,15 +61,21 @@ public class GameManager : MonoBehaviour
 
     public void UpdateCheckPoint(Vector3 newCheckPoint)
     {
-        // player.transform.position = newCheckPoint;
-        Debug.Log("newCheckPoint");
         checkPoint = newCheckPoint;
     }
 
-    // load the specified scene
     public void Reset(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        buttonSound.clip = ButtonClick;
+        buttonSound.Play();
+        StartCoroutine(buttonPress(sceneName));
+        //SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator buttonPress(string name)
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(name);
     }
 
 }

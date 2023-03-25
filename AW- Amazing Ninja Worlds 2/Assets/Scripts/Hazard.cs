@@ -1,22 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Hazard : MonoBehaviour
-{       
-    // references to the background and the healthbar
+{
+    //The object which has the LifeHUD script
+    public GameObject hud;
+    //The object which has the GameManager script
     public GameObject background;
-    public GameObject HealthBar;
 
-    // when the player collides with a hazard
+    private AudioSource hitSound;
+
+    private void Start()
+    {
+        hitSound = GetComponent<AudioSource>();
+    }
+
+    //When anything (currently only the player is possible) touches this object.
     private void OnTriggerEnter(Collider other)
     {
-        // ask the background's game manager script to move the player to the checkpoint
+        hitSound.Play();
+        
+        //Move the player to the last checkpoint
         background.GetComponent<GameManager>().moveToCheckPoint();
-     
-      //  background.GetComponent<GameManager>().UpdateCheckPoint( new Vector3(0 , 0, 0));
-        // ask the healthbar to hurt the player
-        HealthBar.GetComponent<LifeHUD>().HurtPlayer();
+
+        //Apply damage and display it. (also end game if all lives are gone).
+        hud.GetComponent<LifeHUD>().Hurt();
     }
 }

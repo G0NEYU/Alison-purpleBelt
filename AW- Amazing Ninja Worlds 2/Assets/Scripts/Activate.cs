@@ -6,7 +6,7 @@ public class Activate : MonoBehaviour
 {
     public ParticleSystem allParticles;
 
-    // Plays particles
+    // Update is called once per frame
     public void On()
     {
         allParticles.Play();
