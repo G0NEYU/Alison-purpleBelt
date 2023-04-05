@@ -87,7 +87,7 @@ public class CoinAnimate : MonoBehaviour
 
         pHolding.CheckPickUp(collectNumber);
 
-        iManager.GetComponent<InterfaceManager>().CollectibleUpdate(collectNumber);
+        //dddddddddddddddddddddddddddiManager.GetComponent<InterfaceManager>().CollectibleUpdate(collectNumber);
 
         collectNumber = swapNumber;
 

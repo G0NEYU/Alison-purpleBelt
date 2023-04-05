@@ -42,6 +42,7 @@ public class InterfaceManager : MonoBehaviour
     {
         showSprite.SetActive(true);
         collectible.GetComponent<Image>().sprite = collectibleSource[item];
+        seekImage.sprite = collectibleSource[item];
     }
 
     public void ShowBox(string dialog, int item)

@@ -59,6 +59,7 @@ public class DialogOpen : MonoBehaviour
 
     public void searchDialog()
     {
+        Debug.Log(clue);
        if (clue == 0)
         {
             dialog = "Hi! Cant miss this movie tonight, find my film?" ;
@@ -100,6 +101,8 @@ public class DialogOpen : MonoBehaviour
         {
             dialog = "Hi! i need my hat for my magic show! Can you help me find it?";
         }
+
+        interfaceManager.GetComponent<InterfaceManager>().CollectibleUpdate(clue);
        // dialog = "Hi! can you help me find my " + collectibles[clue] + "?";
     }
 }
