@@ -3,8 +3,6 @@
     public int numMoves;
     public int targetScore;
 
-    public [] obstacleTypes;
-
     private int movesUsed = 0;
 
     // Start is called before the first frame update
@@ -13,15 +11,9 @@
         type = LevelType.MOVES;
 
 
-        for (int i = 0; i < obstacleTypes.Length; i++)
-        {
-            numObstaclesLeft += grid.GetPiecesOfType(obstacleTypes[1]).Count;
-        }
-
-
         hud.SetLevelType(type);
         hud.SetScore(currentScore);
-        hud.SetTarget(numObstaclesLeft);
+        hud.SetTarget(targetScore);
         hud.SetRemaining(numMoves);
     }
 
@@ -32,6 +24,7 @@
 
         movesUsed++;
 
+        hud.SetRemaining(numMoves - movesUsed);
         if(numMoves - movesUsed == 0)
         {
             if(currentScore >= targetScore)
