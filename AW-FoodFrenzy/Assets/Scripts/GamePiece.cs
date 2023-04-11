@@ -94,6 +94,7 @@ public class GamePiece : MonoBehaviour
         type = _type;
     }
 
+
     private void OnMouseDown()
     {
         grid.PressPiece(this);

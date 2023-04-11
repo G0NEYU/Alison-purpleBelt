@@ -11,10 +11,6 @@
     {
         type = LevelType.OBSTACLE;
 
-        for(int i=0; i<obstacleTypes.Length; i++)
-        {
-            numObstaclesLeft += grid.GetPiecesOfType(obstacleTypes[i]).Count;
-        }
 
         hud.SetLevelType(type);
         hud.SetScore(currentScore);

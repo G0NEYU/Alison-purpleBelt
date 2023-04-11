@@ -10,6 +10,7 @@
     {
         type = LevelType.MOVES;
 
+       
 
         hud.SetLevelType(type);
         hud.SetScore(currentScore);
@@ -23,6 +24,9 @@
         base.OnMove();
 
         movesUsed++;
+
+        hud.SetRemaining(numMoves - movesUsed);
+       
 
         hud.SetRemaining(numMoves - movesUsed);
         if(numMoves - movesUsed == 0)

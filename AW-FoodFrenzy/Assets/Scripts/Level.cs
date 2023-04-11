@@ -63,11 +63,6 @@ public class Level : MonoBehaviour
 
     public virtual void OnMove()
     {
-        base.OnMove();
-
-        movesUsed++;
-
-        hud.SetRemaining(numMoves - movesUsed);
     }
 
     public virtual void OnPieceCleared(GamePiece piece)
