@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    public Level Level;
+    public GameOver gameOver;
+    
     public enum LevelType
     {
         TIMER,
@@ -113,11 +116,11 @@ public class HUD : MonoBehaviour
 
     public void OnGameWin(int score)
     {
-        isGameOver = true;
+        gameOver.ShowWin(score, starIndex);
     }
 
     public void OnGameLose()
     {
-        isGameOver = false;
+        gameOver.ShowLose();
     }
 }

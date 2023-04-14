@@ -12,15 +12,15 @@ public class GameOver : MonoBehaviour
     public Text scoreText;
     public Image[] stars;
     private Animator animator;
-    
-   
-    
+
+
+
     // Start is called before the first frame update
-    private  void Start()
+    private void Start()
     {
         screenParent.SetActive(false);
 
-        for (int i =0; i < stars.Length; i++)
+        for (int i = 0; i < stars.Length; i++)
         {
             stars[i].enabled = false;
         }
@@ -30,7 +30,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ShowLose()
@@ -54,7 +54,42 @@ public class GameOver : MonoBehaviour
         scoreText.enabled = false;
         if (animator)
         {
-            animator.Play("GameOverShow");
+            animator.Play("GameOverDisplay");
         }
+        StartCoroutine(ShowWinCoroutine(StarCount));
+    }
+
+    private IEnumerator ShowWinCoroutine(int starCount)
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        if (starCount < stars.Length)
+        {
+            for (int i = 0; i <= starCount; i++)
+            {
+
+                stars[i].enabled = true;
+
+                if (i > 0)
+                {
+                    stars[i - 1].enabled = false;
+                }
+
+                yield return new WaitForSeconds(0.5f);
+
+            }
+        }
+        scoreText.enabled = true;
+    }
+
+    public void OnReplayClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    } 
+
+    public void OnDoneClicked()
+    {
+
     }
 }
+
