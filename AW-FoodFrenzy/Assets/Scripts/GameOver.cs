@@ -47,6 +47,7 @@ public class GameOver : MonoBehaviour
 
     public void ShowWin(int score, int StarCount)
     {
+        Debug.Log(score);
         screenParent.SetActive(true);
         scoreParent.SetActive(true);
         loseText.enabled = false;
@@ -89,7 +90,7 @@ public class GameOver : MonoBehaviour
 
     public void OnDoneClicked()
     {
-
+        SceneManager.LoadScene("LevelSelect");
     }
 }
 
