@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -14,9 +15,13 @@ public class Level : MonoBehaviour
     public GameGrid grid;
     public HUD hud;
 
+    public Text targetText;
+
     public int score1Star;
     public int score2Star;
     public int score3Star;
+
+   
 
     protected LevelType type;
 
@@ -25,7 +30,7 @@ public class Level : MonoBehaviour
         get { return type; }
     }
 
-    protected int currentScore;
+    public int currentScore;
 
     protected bool didWin;
 
@@ -69,6 +74,7 @@ public class Level : MonoBehaviour
     {
         //Update Score
         currentScore += piece.score;
+        
 
         hud.SetScore (currentScore);
 

@@ -36,6 +36,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         UpdateStars();
+        targetText.text = ("14");
     }
 
     // Update is called once per frame
@@ -84,6 +85,7 @@ public class HUD : MonoBehaviour
     public void SetTarget(int target)
     {
         targetText.text = target.ToString();
+       
 
     }
     public void SetRemaining(int remaining)
