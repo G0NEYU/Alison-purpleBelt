@@ -30,7 +30,7 @@ public class LevelTimer : Level
             timer += Time.deltaTime;
             hud.SetRemaining(string.Format("{0}:{1:00}",
             (int)Mathf.Max((timeInSeconds-timer)/60,0),
-            (int)Mathf.Max((timeInSeconds-timer)% 60,60)));
+            (int)Mathf.Max((timeInSeconds-timer)% 60,1)));
 
             if (timeInSeconds - timer <= 0)
             {

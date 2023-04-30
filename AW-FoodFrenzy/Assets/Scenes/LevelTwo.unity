@@ -222,12 +222,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 581336197}
   hud: {fileID: 270954197}
-  targetText: {fileID: 765232665}
+  targetText: {fileID: 336970745}
   score1Star: 30000
   score2Star: 35000
   score3Star: 40000
-  currentScore: 14
-  numMoves: 10
+  currentScore: 0
+  numMoves: 14
   targetsubText: 14
   obstacleTypes: 02000000
 --- !u!4 &245619826
@@ -254,6 +254,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b16ca8a2873067540b62cb8d1c0a6834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &336970745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2006738222004735094, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
+  m_PrefabInstance: {fileID: 532799293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!850595691 &450881465
@@ -325,6 +336,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 175504128655625005, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1104
+      objectReference: {fileID: 0}
     - target: {fileID: 2006738221399321089, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -413,9 +428,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2006738221654458618, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
+      propertyPath: m_Text
+      value: '13
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2006738222004735094, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
       propertyPath: m_Text
-      value: 14
+      value: Dishes Remaining
       objectReference: {fileID: 0}
     - target: {fileID: 2006738222004735095, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -771,6 +792,6 @@ MonoBehaviour:
   score2Star: 35000
   score3Star: 40000
   currentScore: 0
-  numMoves: 0
+  numMoves: 14
   targetsubText: 14
   obstacleTypes: 00000000

@@ -16,8 +16,6 @@ public class HUD : MonoBehaviour
         MOVES,
     }
 
-    public Level level;
-
     public Text remainingText;
     public Text remainingSubText;
     public Text targetText;
@@ -65,15 +63,15 @@ public class HUD : MonoBehaviour
 
         int visibleStar = 0;
 
-        if (score >= level.score1Star && score < level.score2Star)
+        if (score >= Level.score1Star && score < Level.score2Star)
         {
             visibleStar = 1;
         }
-        else if(score >= level.score2Star && score < level.score3Star) 
+        else if(score >= Level.score2Star && score < Level.score3Star) 
         {
             visibleStar = 2;
         }
-        else if (score >= level.score3Star)
+        else if (score >= Level.score3Star)
         {
             visibleStar = 3;
         }

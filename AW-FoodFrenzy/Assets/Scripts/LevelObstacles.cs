@@ -52,6 +52,7 @@
                 if (numObstaclesLeft == 0)
                 {
                     currentScore += 1000 * (numMoves - movesUsed);
+                    hud.SetScore(currentScore);
                     GameWin();
                 }
             }

@@ -154,9 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 581336197}
   hud: {fileID: 2103071858}
+  targetText: {fileID: 1041951087}
   score1Star: 15000
   score2Star: 18000
   score3Star: 21000
+  currentScore: 0
   numMoves: 14
   targetScore: 15000
 --- !u!4 &245619826
@@ -562,6 +564,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1041951087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2006738222004735094, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
+  m_PrefabInstance: {fileID: 2006738220805778579}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2103071858 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3036399024224214372, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
@@ -679,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 2006738221399321117, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006738222004735094, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
+      propertyPath: m_Text
+      value: 15000
       objectReference: {fileID: 0}
     - target: {fileID: 3036399024224214372, guid: 2fc38d66f1e7a5f4c99cf81e744c96d4, type: 3}
       propertyPath: Level
