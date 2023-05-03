@@ -16,6 +16,7 @@ public class Level : MonoBehaviour
     public HUD hud;
 
     public Text targetText;
+   
 
     public int score1Star;
     public int score2Star;
@@ -69,6 +70,11 @@ public class Level : MonoBehaviour
     public virtual void OnMove()
     {
     }
+
+
+
+
+
 
     public virtual void OnPieceCleared(GamePiece piece)
     {

@@ -1,11 +1,14 @@
-﻿public class LevelObstacles : Level
+﻿using UnityEngine.UI;
+
+
+
+public class LevelObstacles : Level
 {
-    public int numMoves;
-    public int targetsubText;
+    public int numMoves ;
     public GameGrid.PieceType[] obstacleTypes;
 
-    private int movesUsed = 0;
-    private int numObstaclesLeft;
+    private int movesRemaining = 14;
+    private int numObstaclesLeft = 13;
    
 
     // Start is called before the first frame update
@@ -31,9 +34,11 @@
     {
         base.OnMove();
 
-        movesUsed++;
+        movesRemaining++;
 
-        if (numMoves - movesUsed == 0 && numObstaclesLeft > 0)
+        hud.SetRemaining(numMoves - movesRemaining);
+
+        if (numMoves - movesRemaining == 0 && numObstaclesLeft > 0)
         {
             GameLose();
         }
@@ -51,7 +56,7 @@
                 hud.SetTarget(numObstaclesLeft);
                 if (numObstaclesLeft == 0)
                 {
-                    currentScore += 1000 * (numMoves - movesUsed);
+                    currentScore += 1000 * (numMoves - movesRemaining);
                     hud.SetScore(currentScore);
                     GameWin();
                 }
