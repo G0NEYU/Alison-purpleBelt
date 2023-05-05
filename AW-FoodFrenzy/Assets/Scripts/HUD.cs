@@ -34,7 +34,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         UpdateStars();
-        targetText.text = ("14");
+      
     }
 
     // Update is called once per frame

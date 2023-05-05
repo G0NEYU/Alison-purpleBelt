@@ -22,7 +22,6 @@ public class Level : MonoBehaviour
     public int score2Star;
     public int score3Star;
 
-   
 
     protected LevelType type;
 
@@ -73,7 +72,7 @@ public class Level : MonoBehaviour
 
 
 
-
+   
 
 
     public virtual void OnPieceCleared(GamePiece piece)

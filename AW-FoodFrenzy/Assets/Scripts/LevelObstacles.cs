@@ -1,4 +1,4 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
 
 
 
@@ -7,7 +7,14 @@ public class LevelObstacles : Level
     public int numMoves ;
     public GameGrid.PieceType[] obstacleTypes;
 
-    private int movesRemaining = 14;
+    //so this means at the beginning of yor game , you've used 14 moves
+    //it basically forces a private var to show in editor
+    //its still private
+    //you understood? what happened?
+    //no
+    [SerializeField]
+    private int movesUsed = 0;
+    [SerializeField]
     private int numObstaclesLeft = 13;
    
 
@@ -34,11 +41,11 @@ public class LevelObstacles : Level
     {
         base.OnMove();
 
-        movesRemaining++;
+        movesUsed++;
 
-        hud.SetRemaining(numMoves - movesRemaining);
+        hud.SetRemaining(numMoves - movesUsed);
 
-        if (numMoves - movesRemaining == 0 && numObstaclesLeft > 0)
+        if (numMoves - movesUsed == 0 && numObstaclesLeft > 0)
         {
             GameLose();
         }
@@ -56,7 +63,7 @@ public class LevelObstacles : Level
                 hud.SetTarget(numObstaclesLeft);
                 if (numObstaclesLeft == 0)
                 {
-                    currentScore += 1000 * (numMoves - movesRemaining);
+                    currentScore += 1000 * (numMoves - movesUsed);
                     hud.SetScore(currentScore);
                     GameWin();
                 }
